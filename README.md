@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+# React starter template for Cosmocloud hackathon
+Save time in development set up.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Used stack
+- **UI** - Tailwindcss / ShadCn
+- **Authentication** - AWS Cognito 
+- **API client** - Axios 
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Environment Variables](#environment-variables)
+- [Available Scripts](#available-scripts)
+- [Adding Dependencies](#adding-dependencies)
+- [Building for Production](#building-for-production)
+- [Useful Resources](#useful-resources)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Before you begin, ensure you have the following installed on your machine:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository:**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+2. **Install dependencies**
+
+   ```bash
+    npm install
+    # or
+    yarn install
+   ```
+3. **Set up environment variables**
+   Copy the .env.example file to .env and update it with your environment-specific variables.
+
+   ```bash
+   cp .env.example .env
+   ```
+4. **Start the development server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   This will start the Vite development server and open your React app in the default browser.
+
+### Project Structure
+Your Vite React project is organized into the following structure:
+```bash
+├── src
+│   ├── components       # Reusable UI components
+│   ├── lib              # Utility functions and libraries
+│   ├── pages            # Page components (e.g., Home, About, etc.)
+│   ├── service
+│   │   ├── axios        # Axios configuration and HTTP requests
+│   │   ├── amplify      # AWS Amplify configuration and utility functions
+│   ├── App.jsx          # Main app component
+│   ├── main.jsx         # Entry point for the application
+│   └── index.html       # HTML template for the app
+├── .env.example         # Example environment variables
+├── vite.config.js       # Vite configuration
+├── package.json         # Project metadata and scripts
+└── README.md            # Project documentation (this file)
 ```
