@@ -1,7 +1,7 @@
 # React starter template for Cosmocloud hackathon
 Save time in development set up.
-- [Explore Documentation](https://www.docs.cosmocloud.io)
-- [Build API's using Cosmocloud](https://www.dashboard.cosmocloud.io)
+- [Explore Documentation](https://docs.cosmocloud.io/)
+- [Build API's using Cosmocloud](https://dashboard.cosmocloud.io)
 
 ## Used stack
 - **UI** - Tailwindcss / ShadCn
