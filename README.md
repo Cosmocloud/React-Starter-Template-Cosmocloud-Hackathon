@@ -45,9 +45,19 @@ Before you begin, ensure you have the following installed on your machine:
 3. **Set up environment variables**
    Copy the .env.example file to .env and update it with your environment-specific variables.
 
-   ```bash
-   cp .env.example .env
-   ```
+   - **Linux / macOS:**
+     ```bash
+     cp .env.example .env
+     ```
+   - **Windows (Command Prompt):**
+     ```cmd
+     copy .env.example .env
+     ```
+   - **Windows (PowerShell):**
+     ```powershell
+     Copy-Item .env.example .env
+     ```
+
 4. **Start the development server**
 
    ```bash
